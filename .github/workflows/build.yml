@@ -14,3 +14,7 @@ jobs:
       - uses: gradle/wrapper-validation-action@v1
       - run: chmod +x ./gradlew
       - run: ./gradlew build test --stacktrace
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: build/
